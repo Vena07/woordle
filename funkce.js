@@ -12,7 +12,7 @@ console.log(vyherni_slovo);
 let rada1 = 1;
 let narade = 1;
 let poradi = 1;
-
+let spravne =0;
 let pokus = 0;
 function rada(){
     if (rada1 === 1) {
@@ -91,11 +91,18 @@ function kontrola(){
     }
     console.log(vase_slovo)
     console.log(vyherni_slovo)
-    console.log(vase_slovo===vyherni_slovo)
-    if (vase_slovo !==vyherni_slovo) {
+    console.log(vase_slovo.includes(vyherni_slovo))
+    spravne = 0;
+    
+    for (let index = 0; index < 5; index++) {
+        if (vase_slovo[index]===vyherni_slovo[index]) {
+            spravne++;
+        } 
+    }
+    
+    if (spravne === 5) {
         rada1 = 69;
         narade = "ahoj :)";
-        
         alert("Uhodli jste správné slovo");
     }
     pokus++;
