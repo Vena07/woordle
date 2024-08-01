@@ -48,6 +48,7 @@ function smazat() {
 }
 
 function kontrola() {
+    rada1++;
     let vase_slovo = [];
     for (let index = 1; index < 6; index++) {
         let pridat = document.getElementById(narade[index]);
